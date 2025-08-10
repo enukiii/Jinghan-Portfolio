@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbies | Jinghan's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+                <div class="navbar-brand" style="cursor:pointer;" id="home-brand">Jinghan's Portfolio</div>
+                <ul>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="Hobbies.html">Hobbies</a></li>
+                </ul>
+        </nav>
+    </header>
+    <main>
+            <section id="intro">
+                <h2>Introduction</h2>
+                <p>Hello, I am Jinghan, 19 this year! I'm currently pursuing a Diploma in Information Technology at Nanyang Polytechnic. I'm passionate about tech, design, and building cool stuff on the web. Here's a little more about me:</p>
+                <div style="background:#222a35; color:#e0e6f6; border-radius:8px; padding:1em; margin-bottom:1.5em; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+                        I'm a front-end developer who loves making websites look good and work smoothly. I have a solid background in UI/UX design and have worked with JavaScript, React, Node.js, Python, Flask, and Jinja. I enjoy building responsive web apps that are both functional and user-friendly. I'm easy to work with, communicate well, and always try to solve problems as a team. I am also part of NYP’s Blockchain Student Interest Group EXCO, where I helped out with tech projects and got some cool leadership and community experience.
+                </div>
+                <p>In my free time, I also run a Telegram channel called <strong>fuecoMartz</strong> where I sell sealed products and host claim sales.
+            </section>
+            <section id="hobbies">
+                <h2>My Hobbies & Interests</h2>
+                <div class="hobbies-list">
+                    <div class="hobby">
+                        <i class="fas fa-gamepad"></i>
+                        <h3>Gaming</h3>
+                        <p>Enjoy playing 王者荣耀 (Wang Zhe Rong Yao), Honor of Kings, Wuthering Waves, and Pokémon TCG Live. I love exploring open world (MMORPG), strategy, and competitive games.</p>
+                    </div>
+                    <div class="hobby">
+                        <i class="fas fa-dragon"></i>
+                        <h3>Pokémon Collector</h3>
+                        <p>I collect chase Pokémon cards, attend card shows, and actively participate in the Pokémon community in Singapore. I also play the actual Pokémon TCG game and enjoy connecting with fellow collectors and players.</p>
+                    </div>
+                    <div class="hobby">
+                        <i class="fas fa-search"></i>
+                        <h3>Exploration</h3>
+                            <p>I love exploring different areas of IT, and I've participated in many competitions to try out new things and discover what I'm good at. It's a fun way to learn and push myself beyond my comfort zone!</p>
+                    </div>
+                </div>
+            </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Jinghan's Portfolio.</p>
+		<div class="social-links">
+			<a href="https://www.linkedin.com/in/jinghan-pan-114b44252" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+			<a href="https://github.com/enukiii" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+			<a href="https://discordapp.com/users/noidontwantsomesand" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
+		</div>
+    </footer>
+</body>
+<script>
+// Make header brand clickable to go to homepage
+document.addEventListener('DOMContentLoaded', function() {
+    var brand = document.getElementById('home-brand');
+    if (brand) {
+        brand.addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+    }
+});
+</script>
+</html>

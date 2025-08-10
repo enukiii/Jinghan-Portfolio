@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Jinghan | Professional Tech Portfolio</title>
+	<title>Jinghan's Portfolio</title>
 	<link rel="stylesheet" href="style.css">
 	<!-- Font Awesome for skill icons -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -12,9 +12,10 @@
 <body>
 	<header>
 		<nav class="navbar">
-			<div class="navbar-brand">Jinghan's Portfolio</div>
+			<div class="navbar-brand" style="cursor:pointer;" id="home-brand">Jinghan's Portfolio</div>
 			<ul>
 				<li><a href="projects.html">Projects</a></li>
+				<li><a href="Hobbies.html">Hobbies</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -29,6 +30,7 @@
 					<p class="about-intro">
 						Passionate about building modern, efficient, and scalable web applications. Dedicated to delivering impactful solutions and contributing to the advancement of the tech industry.
 					</p>
+                    <a href="Hobbies.html" class="learn-more-btn">Learn More</a>
 				</div>
 			</div>
 		</section>
@@ -97,21 +99,27 @@
 				</div>
 			</div>
 		</section>
-		<section id="contact">
-			<h2>Contact Me</h2>
-			<p>If you would like to discuss a project or collaboration, please fill out the form below. I will respond as soon as possible.</p>
-			<form id="contact-form">
-				<input type="text" placeholder="Full Name" required>
-				<input type="email" placeholder="Email Address" required>
-				<textarea placeholder="Your Message" required></textarea>
-				<button type="submit">Send Message</button>
-			</form>
-			<div id="form-message"></div>
-		</section>
 	</main>
 	<footer>
 		<p>&copy; 2025 Jinghan's Portfolio.</p>
+		<div class="social-links">
+			<a href="https://www.linkedin.com/in/jinghan-pan-114b44252" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+			<a href="https://github.com/enukiii" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+			<a href="https://discordapp.com/users/noidontwantsomesand" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
+		</div>
 	</footer>
 	<script src="script.js"></script>
+</body>
+<script>
+// Make header brand clickable to go to homepage
+document.addEventListener('DOMContentLoaded', function() {
+	var brand = document.getElementById('home-brand');
+	if (brand) {
+		brand.addEventListener('click', function() {
+			window.location.href = 'index.html';
+		});
+	}
+});
+</script>
 </body>
 </html>

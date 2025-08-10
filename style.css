@@ -1,3 +1,54 @@
+/* Hobbies Section Styles */
+.hobbies-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.hobby {
+    background: #232336;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px #a259ff22;
+    border: 1px solid #a259ff33;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+.hobby:hover {
+    box-shadow: 0 8px 32px #a259ff44;
+    transform: translateY(-4px) scale(1.03);
+}
+.hobby i {
+    font-size: 2.5rem;
+    color: #a259ff;
+    margin-bottom: 0.7rem;
+}
+.hobby h3 {
+    color: #eae6f7;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+.hobby p {
+    color: #d1d5db;
+    font-size: 1rem;
+    margin: 0;
+}
+/* Social Links Styles */
+.social-links {
+    margin-top: 0.7rem;
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+.social-links a {
+    color: #a259ff;
+    font-size: 1.7rem;
+    transition: color 0.2s, transform 0.2s;
+}
+.social-links a:hover {
+    color: #eae6f7;
+    transform: scale(1.2);
+}
 /* Fixed Navigation Bar */
 .navbar {
     position: fixed;

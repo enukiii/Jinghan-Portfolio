@@ -10,10 +10,11 @@
 <body>
     <header>
         <nav class="navbar">
-            <div class="navbar-brand">Jinghan's Portfolio</div>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-            </ul>
+                <div class="navbar-brand" style="cursor:pointer;" id="home-brand">Jinghan's Portfolio</div>
+                <ul>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="Hobbies.html">Hobbies</a></li>
+                </ul>
         </nav>
     </header>
     <main>
@@ -50,6 +51,22 @@
     </main>
     <footer>
         <p>&copy; 2025 Jinghan's Portfolio.</p>
+        <div class="social-links">
+			<a href="https://www.linkedin.com/in/jinghan-pan-114b44252" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+			<a href="https://github.com/enukiii" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+			<a href="https://discordapp.com/users/noidontwantsomesand" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
+		</div>
     </footer>
 </body>
+<script>
+// Make header brand clickable to go to homepage
+document.addEventListener('DOMContentLoaded', function() {
+    var brand = document.getElementById('home-brand');
+    if (brand) {
+        brand.addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+    }
+});
+</script>
 </html>
