@@ -73,23 +73,17 @@
     .navbar ul.active {
         right: 0;
     }
-        .navbar-hamburger {
-            display: block;
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 300;
-            font-size: 1.4em;
-        }
-    .navbar-close {
+    .navbar-hamburger {
         display: block;
-        position: absolute;
-        top: 24px;
-        right: 24px;
-        font-size: 2em;
-        color: #fff;
-        cursor: pointer;
-        z-index: 301;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 9999;
+        background: rgba(34,34,34,0.95);
+        padding: 4px 8px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        font-size: 1.2em;
     }
 }
 .social-links a {
