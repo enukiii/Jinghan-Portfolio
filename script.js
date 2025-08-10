@@ -22,3 +22,15 @@ navLinks.forEach(link => {
         }
     });
 });
+
+// Hamburger menu toggle
+document.addEventListener('DOMContentLoaded', function () {
+    var hamburger = document.getElementById('navbar-hamburger');
+    var navLinks = document.getElementById('navbar-links');
+
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', function () {
+            navLinks.classList.toggle('active');
+        });
+    }
+});
