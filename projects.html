@@ -28,17 +28,13 @@
                     <p><strong>Role:</strong> Chatbot & User Interaction Feature Developer</p>
                     <div style="display:flex; flex-direction:column; align-items:center; margin:24px 0; gap:32px;">
                         <div style="display:flex; flex-direction:row; justify-content:center; align-items:flex-start; gap:48px; width:100%; max-width:1000px; flex-wrap:wrap;">
-                            <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:440px;">
-                                <img src="Chatbot.png" alt="Chatbot Feature" style="width:440px; border-radius:18px; margin-bottom:18px;">
-                                <div style="background:#181818; color:#eaeaea; border-radius:8px; padding:14px 22px; box-shadow:0 1px 8px #333; font-size:1.08em; text-align:left;">
+                            <div id="rentogo-carousel" style="display:flex; flex-direction:column; align-items:center; max-width:440px; position:relative;">
+                                <button id="rentogo-left" style="position:absolute; left:-40px; top:50%; transform:translateY(-50%); background:#232336; color:#a259ff; border:none; border-radius:50%; width:36px; height:36px; font-size:1.5em; cursor:pointer; z-index:2;">&#8592;</button>
+                                <img id="rentogo-image" src="Chatbot.png" alt="Chatbot Feature" style="width:440px; border-radius:18px; margin-bottom:18px; transition:all 0.3s;">
+                                <div id="rentogo-caption" style="color:#eaeaea; border-radius:8px; padding:14px 22px; font-size:1.08em; text-align:left;">
                                     <strong>Chatbot:</strong> Provides instant support and answers to user queries, making the rental process smoother and more interactive.
                                 </div>
-                            </div>
-                            <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:440px;">
-                                <img src="Feedback.png" alt="Feedback Feature" style="width:440px; border-radius:18px; margin-bottom:18px;">
-                                <div style="color:#eaeaea; border-radius:8px; padding:14px 22px; font-size:1.08em; text-align:left;">
-                                    <strong>Feedback:</strong> Lets users easily submit feedback and suggestions, helping us improve the app based on real user experiences.
-                                </div>
+                                <button id="rentogo-right" style="position:absolute; right:-40px; top:50%; transform:translateY(-50%); background:#232336; color:#a259ff; border:none; border-radius:50%; width:36px; height:36px; font-size:1.5em; cursor:pointer; z-index:2;">&#8594;</button>
                             </div>
                         </div>
                     </div>
@@ -57,17 +53,13 @@
                     <p><strong>Technologies:</strong> React, Node.js, SQL, HTML, CSS, OpenAI API</p>
                     <p><strong>Role:</strong> User Interaction & Automation Feature Developer</p>
                     <div style="display:flex; flex-direction:row; justify-content:center; align-items:flex-start; gap:48px; width:100%; max-width:1000px; flex-wrap:wrap; margin:24px 0;">
-                        <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:440px;">
-                            <img src="ChatbotGenai.png" alt="Chatbot GenAI Feature" style="width:440px; border-radius:18px; box-shadow:0 4px 24px #222; margin-bottom:18px;">
-                                <div style="color:#eaeaea; border-radius:8px; padding:14px 22px; font-size:1.08em; text-align:left;">
-                                    <strong>Chatbot GenAI (OpenAI, Multilanguage):</strong> Automates business processes and provides intelligent, multilingual responses to user queries using advanced OpenAI models.
-                                </div>
-                        </div>
-                        <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:440px;">
-                            <img src="EmailGenerator.png" alt="Email Generator Feature" style="width:440px; border-radius:18px; box-shadow:0 4px 24px #222; margin-bottom:18px;">
-                            <div style="background:#181818; color:#eaeaea; border-radius:8px; padding:14px 22px; box-shadow:0 1px 8px #333; font-size:1.08em; text-align:left;">
-                                <strong>Email Generator:</strong> Uses OpenAI to quickly create professional emails, streamlining communication and saving time for users.
+                        <div id="globance-carousel" style="display:flex; flex-direction:column; align-items:center; max-width:440px; position:relative;">
+                            <button id="globance-left" style="position:absolute; left:-40px; top:50%; transform:translateY(-50%); background:#232336; color:#a259ff; border:none; border-radius:50%; width:36px; height:36px; font-size:1.5em; cursor:pointer; z-index:2;">&#8592;</button>
+                            <img id="globance-image" src="ChatbotGenai.png" alt="Chatbot GenAI Feature" style="width:440px; border-radius:18px; margin-bottom:18px; transition:all 0.3s;">
+                            <div id="globance-caption" style="color:#eaeaea; border-radius:8px; padding:14px 22px; font-size:1.08em; text-align:left;">
+                                <strong>Chatbot GenAI (Multilanguage):</strong> Automates business processes and provides intelligent, multilingual responses to user queries.
                             </div>
+                            <button id="globance-right" style="position:absolute; right:-40px; top:50%; transform:translateY(-50%); background:#232336; color:#a259ff; border:none; border-radius:50%; width:36px; height:36px; font-size:1.5em; cursor:pointer; z-index:2;">&#8594;</button>
                         </div>
                     </div>
                     <ul>
@@ -97,6 +89,72 @@ document.addEventListener('DOMContentLoaded', function() {
     if (brand) {
         brand.addEventListener('click', function() {
             window.location.href = 'index.html';
+        });
+    }
+    // Globance carousel functionality
+    var globanceImages = [
+        {
+            src: 'ChatbotGenai.png',
+            alt: 'Chatbot GenAI Feature',
+            caption: '<strong>Chatbot GenAI (Multilanguage):</strong> Automates business processes and provides intelligent, multilingual responses to user queries.'
+        },
+        {
+            src: 'EmailGenerator.png',
+            alt: 'Email Generator Feature',
+            caption: '<strong>Email Generator:</strong> Uses OpenAI to quickly create professional emails, streamlining communication and saving time for users.'
+        }
+    ];
+    var globanceCurrent = 0;
+    var globanceImg = document.getElementById('globance-image');
+    var globanceCaption = document.getElementById('globance-caption');
+    var globanceLeftBtn = document.getElementById('globance-left');
+    var globanceRightBtn = document.getElementById('globance-right');
+    function updateGlobanceCarousel(idx) {
+        globanceImg.src = globanceImages[idx].src;
+        globanceImg.alt = globanceImages[idx].alt;
+        globanceCaption.innerHTML = globanceImages[idx].caption;
+    }
+    if (globanceImg && globanceCaption && globanceLeftBtn && globanceRightBtn) {
+        globanceLeftBtn.addEventListener('click', function() {
+            globanceCurrent = (globanceCurrent - 1 + globanceImages.length) % globanceImages.length;
+            updateGlobanceCarousel(globanceCurrent);
+        });
+        globanceRightBtn.addEventListener('click', function() {
+            globanceCurrent = (globanceCurrent + 1) % globanceImages.length;
+            updateGlobanceCarousel(globanceCurrent);
+        });
+    }
+    // RENT TO GO carousel functionality
+    var images = [
+        {
+            src: 'Chatbot.png',
+            alt: 'Chatbot Feature',
+            caption: '<strong>Chatbot:</strong> Provides instant support and answers to user queries, making the rental process smoother and more interactive.'
+        },
+        {
+            src: 'Feedback.png',
+            alt: 'Feedback Feature',
+            caption: '<strong>Feedback:</strong> Lets users easily submit feedback and suggestions, helping us improve the app based on real user experiences.'
+        }
+    ];
+    var current = 0;
+    var img = document.getElementById('rentogo-image');
+    var caption = document.getElementById('rentogo-caption');
+    var leftBtn = document.getElementById('rentogo-left');
+    var rightBtn = document.getElementById('rentogo-right');
+    function updateCarousel(idx) {
+        img.src = images[idx].src;
+        img.alt = images[idx].alt;
+        caption.innerHTML = images[idx].caption;
+    }
+    if (img && caption && leftBtn && rightBtn) {
+        leftBtn.addEventListener('click', function() {
+            current = (current - 1 + images.length) % images.length;
+            updateCarousel(current);
+        });
+        rightBtn.addEventListener('click', function() {
+            current = (current + 1) % images.length;
+            updateCarousel(current);
         });
     }
 });
