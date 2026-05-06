@@ -10,68 +10,151 @@
 <body>
     <header>
         <nav class="navbar">
-                <div class="navbar-brand" style="cursor:pointer;" id="home-brand">Jinghan's Portfolio</div>
-                <div class="navbar-hamburger" id="navbar-hamburger">
-                    <i class="fas fa-bars"></i>
-                </div>
-                <ul id="navbar-links">
-                    <li><a href="Hobbies.html">Introduction</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                </ul>
+            <div class="navbar-brand" style="cursor:pointer;" id="home-brand">Jinghan's Portfolio</div>
+            <div class="navbar-hamburger" id="navbar-hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul id="navbar-links">
+                <li><a href="Hobbies.html">Introduction</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
         </nav>
     </header>
     <main>
-        <section id="projects">
-            <h2>Featured Projects</h2>
-            <div class="project-list" style="display:block;">
-                <div class="project" style="margin-bottom:32px;">
-                    <h3 style="margin-bottom:12px;">RENT TO GO</h3>
-                    <p><strong>Type:</strong> App Development Project</p>
-                    <p><strong>Technologies:</strong> Python, Flask, Jinja, HTML, CSS, JavaScript</p>
-                    <p><strong>Role:</strong> Chatbot & User Interaction Feature Developer</p>
-                    <div style="display:flex; flex-direction:column; align-items:center; margin:24px 0; gap:32px;">
-                        <div style="display:flex; flex-direction:row; justify-content:center; align-items:flex-start; gap:48px; width:100%; max-width:1000px; flex-wrap:wrap;">
-                            <div id="rentogo-carousel" style="display:flex; flex-direction:column; align-items:center; max-width:440px; position:relative;">
-                                <button id="rentogo-left" style="position:absolute; left:-40px; top:50%; transform:translateY(-50%); background:#232336; color:#a259ff; border:none; border-radius:50%; width:36px; height:36px; font-size:1.5em; cursor:pointer; z-index:2;">&#8592;</button>
-                                <img id="rentogo-image" src="Chatbot.png" alt="Chatbot Feature" style="width:440px; border-radius:18px; margin-bottom:18px; transition:all 0.3s;">
-                                <div id="rentogo-caption" style="color:#eaeaea; border-radius:8px; padding:14px 22px; font-size:1.08em; text-align:left;">
-                                    <strong>Chatbot:</strong> Provides instant support and answers to user queries, making the rental process smoother and more interactive.
-                                </div>
-                                <button id="rentogo-right" style="position:absolute; right:-40px; top:50%; transform:translateY(-50%); background:#232336; color:#a259ff; border:none; border-radius:50%; width:36px; height:36px; font-size:1.5em; cursor:pointer; z-index:2;">&#8594;</button>
-                            </div>
-                        </div>
+        <section id="projects" class="projects-section">
+            <h2>My Projects</h2>
+            <p class="projects-intro">Explore my featured projects showcasing full-stack development, UI/UX design, and problem-solving abilities.</p>
+
+            <!-- RENT TO GO Project -->
+            <div class="project-details">
+                <div class="project-header-detail">
+                    <div class="project-info">
+                        <h3>RENT TO GO</h3>
+                        <p class="project-subtitle">Marketplace App for Renting Eco-Friendly Items</p>
                     </div>
-                    <ul style="margin-top:18px;">
-                        <li style="margin-bottom:10px;"><strong>Chatbot Integration:</strong> Developed and integrated the chatbot for user support and engagement.</li>
-                        <li style="margin-bottom:10px;"><strong>User Interaction:</strong> Implemented user interaction features to enhance app usability.</li>
-                        <li style="margin-bottom:10px;"><strong>Feedback System:</strong> Added a feedback system for users to share suggestions and report issues.</li>
-                        <li style="margin-bottom:10px;"><strong>Team Collaboration:</strong> Collaborated with the team to deliver a seamless rental experience.</li>
-                    </ul>
-                    <p style="margin-top:12px;"><strong>Timeline:</strong> 2024 - 2025</p>
+                    <div class="project-meta">
+                        <span class="meta-badge">
+                            <i class="fas fa-calendar-alt"></i> 2024 - 2025
+                        </span>
+                    </div>
                 </div>
-                <div class="project">
-                    <a id="globance"></a>
-                    <h3>Globance <span style="font-size:0.9em; color:#00aaff;">| Kwang Hiap Siang Pte Ltd</span></h3>
-                    <p><strong>Type:</strong> Full Stack Development</p>
-                    <p><strong>Technologies:</strong> React, Node.js, SQL, HTML, CSS, OpenAI API</p>
-                    <p><strong>Role:</strong> User Interaction & Automation Feature Developer</p>
-                    <div style="display:flex; flex-direction:row; justify-content:center; align-items:flex-start; gap:48px; width:100%; max-width:1000px; flex-wrap:wrap; margin:24px 0;">
-                        <div id="globance-carousel" style="display:flex; flex-direction:column; align-items:center; max-width:440px; position:relative;">
-                            <button id="globance-left" style="position:absolute; left:-40px; top:50%; transform:translateY(-50%); background:#232336; color:#a259ff; border:none; border-radius:50%; width:36px; height:36px; font-size:1.5em; cursor:pointer; z-index:2;">&#8592;</button>
-                            <img id="globance-image" src="ChatbotGenai.png" alt="Chatbot GenAI Feature" style="width:440px; border-radius:18px; margin-bottom:18px; transition:all 0.3s;">
-                            <div id="globance-caption" style="color:#eaeaea; border-radius:8px; padding:14px 22px; font-size:1.08em; text-align:left;">
-                                <strong>Chatbot GenAI (Multilanguage):</strong> Automates business processes and provides intelligent, multilingual responses to user queries.
-                            </div>
-                            <button id="globance-right" style="position:absolute; right:-40px; top:50%; transform:translateY(-50%); background:#232336; color:#a259ff; border:none; border-radius:50%; width:36px; height:36px; font-size:1.5em; cursor:pointer; z-index:2;">&#8594;</button>
+
+                <div class="project-body">
+                    <div class="project-overview">
+                        <div class="overview-item">
+                            <h4><i class="fas fa-cube"></i> Project Type</h4>
+                            <p>App Development</p>
+                        </div>
+                        <div class="overview-item">
+                            <h4><i class="fas fa-tools"></i> Tech Stack</h4>
+                            <p>Python, Flask, Jinja, HTML, CSS, JavaScript</p>
+                        </div>
+                        <div class="overview-item">
+                            <h4><i class="fas fa-user-tie"></i> My Role</h4>
+                            <p>Chatbot & User Interaction Developer</p>
                         </div>
                     </div>
-                    <ul>
-                        <li style="margin-bottom:10px;"><strong>User Interaction:</strong> Designed and implemented user interaction features for the platform.</li>
-                        <li style="margin-bottom:10px;"><strong>Chatbot Automation:</strong> Developed and integrated a chatbot for business automation.</li>
-                        <li style="margin-bottom:10px;"><strong>Email Generator:</strong> Built an email generator feature using OpenAI for efficient communications.</li>
-                        <li style="margin-bottom:10px;"><strong>User Engagement:</strong> Worked closely with users to improve engagement and usability.</li>
-                    </ul>
-                    <p><strong>Timeline:</strong> 2025</p>
+
+                    <div class="project-details-grid">
+                        <div class="details-left">
+                            <h4>Project Description</h4>
+                            <p>A comprehensive marketplace application designed for renting eco-friendly items. The platform enables users to browse, rent, and manage rental transactions seamlessly. I contributed to both frontend and backend development, focusing on user interaction features and chatbot integration.</p>
+                            
+                            <h4 style="margin-top: 2rem;">Key Contributions</h4>
+                            <ul class="contributions-list">
+                                <li><strong>Chatbot Integration:</strong> Developed and integrated a chatbot feature to provide instant support and enhance user engagement.</li>
+                                <li><strong>User Interaction Features:</strong> Implemented interactive components to improve app usability and user experience.</li>
+                                <li><strong>Feedback System:</strong> Built a comprehensive feedback system allowing users to share suggestions and report issues.</li>
+                                <li><strong>Team Collaboration:</strong> Worked closely with team members to deliver a seamless rental experience.</li>
+                            </ul>
+                        </div>
+                        <div class="details-right">
+                            <div id="rentogo-carousel" class="carousel-wrapper">
+                                <div class="carousel-container">
+                                    <img id="rentogo-image" src="Chatbot.png" alt="Chatbot Feature" class="carousel-image">
+                                    <div id="rentogo-caption" class="carousel-caption">
+                                        <strong>Chatbot:</strong> Provides instant support and answers to user queries, making the rental process smoother and more interactive.
+                                    </div>
+                                </div>
+                                <div class="carousel-controls">
+                                    <button id="rentogo-left" class="carousel-btn prev">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </button>
+                                    <button id="rentogo-right" class="carousel-btn next">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Globance Project -->
+            <div class="project-details" id="globance">
+                <div class="project-header-detail">
+                    <div class="project-info">
+                        <h3>Globance</h3>
+                        <p class="project-subtitle">AI-Driven Web Tools for Wholesale Trade | Kwang Hiap Siang Pte Ltd</p>
+                    </div>
+                    <div class="project-meta">
+                        <span class="meta-badge company-badge">
+                            <i class="fas fa-building"></i> Company Project
+                        </span>
+                        <span class="meta-badge">
+                            <i class="fas fa-calendar-alt"></i> 2025
+                        </span>
+                    </div>
+                </div>
+
+                <div class="project-body">
+                    <div class="project-overview">
+                        <div class="overview-item">
+                            <h4><i class="fas fa-cube"></i> Project Type</h4>
+                            <p>Full Stack Development</p>
+                        </div>
+                        <div class="overview-item">
+                            <h4><i class="fas fa-tools"></i> Tech Stack</h4>
+                            <p>React, Node.js, SQL, HTML, CSS, OpenAI API</p>
+                        </div>
+                        <div class="overview-item">
+                            <h4><i class="fas fa-user-tie"></i> My Role</h4>
+                            <p>User Interaction & Automation Developer</p>
+                        </div>
+                    </div>
+
+                    <div class="project-details-grid">
+                        <div class="details-left">
+                            <h4>Project Description</h4>
+                            <p>An AI-powered platform designed to streamline wholesale trade operations. Globance automates sourcing processes and export communications using cutting-edge AI technology. The platform significantly improved workflow efficiency and lead targeting capabilities for the company.</p>
+                            
+                            <h4 style="margin-top: 2rem;">Key Contributions</h4>
+                            <ul class="contributions-list">
+                                <li><strong>User Interaction Design:</strong> Designed and implemented intuitive user interaction features for the platform.</li>
+                                <li><strong>Chatbot Automation:</strong> Developed an AI-powered chatbot using OpenAI API for business process automation.</li>
+                                <li><strong>Email Generator:</strong> Built an intelligent email generation feature leveraging OpenAI for efficient communications.</li>
+                                <li><strong>Performance Optimization:</strong> Optimized platform performance and improved user engagement metrics.</li>
+                            </ul>
+                        </div>
+                        <div class="details-right">
+                            <div id="globance-carousel" class="carousel-wrapper">
+                                <div class="carousel-container">
+                                    <img id="globance-image" src="ChatbotGenai.png" alt="Chatbot GenAI Feature" class="carousel-image">
+                                    <div id="globance-caption" class="carousel-caption">
+                                        <strong>Chatbot GenAI (Multilanguage):</strong> Automates business processes with intelligent, multilingual responses.
+                                    </div>
+                                </div>
+                                <div class="carousel-controls">
+                                    <button id="globance-left" class="carousel-btn prev">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </button>
+                                    <button id="globance-right" class="carousel-btn next">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -79,88 +162,98 @@
     <footer>
         <p>&copy; 2025 Jinghan's Portfolio.</p>
         <div class="social-links">
-			<a href="https://www.linkedin.com/in/jinghan-pan-114b44252" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-			<a href="https://github.com/enukiii" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-			<a href="https://discordapp.com/users/noidontwantsomesand" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
-		</div>
+            <a href="https://www.linkedin.com/in/jinghan-pan-114b44252" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/enukiii" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://discordapp.com/users/noidontwantsomesand" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
+        </div>
     </footer>
     <script src="script.js"></script>
+    <script>
+        // Make header brand clickable to go to homepage
+        document.addEventListener('DOMContentLoaded', function() {
+            var brand = document.getElementById('home-brand');
+            if (brand) {
+                brand.addEventListener('click', function() {
+                    window.location.href = 'index.html';
+                });
+            }
+
+            // RENT TO GO carousel
+            var rentogoImages = [
+                {
+                    src: 'Chatbot.png',
+                    alt: 'Chatbot Feature',
+                    caption: '<strong>Chatbot:</strong> Provides instant support and answers to user queries, making the rental process smoother and more interactive.'
+                },
+                {
+                    src: 'Feedback.png',
+                    alt: 'Feedback Feature',
+                    caption: '<strong>Feedback:</strong> Lets users easily submit feedback and suggestions, helping improve the app based on real user experiences.'
+                }
+            ];
+            var rentogtoCurrent = 0;
+            var rentogoImg = document.getElementById('rentogo-image');
+            var rentogoCaption = document.getElementById('rentogo-caption');
+            var rentogoLeftBtn = document.getElementById('rentogo-left');
+            var rentogoRightBtn = document.getElementById('rentogo-right');
+
+            function updateRentogoCarousel(idx) {
+                if (rentogoImg && rentogoCaption) {
+                    rentogoImg.src = rentogoImages[idx].src;
+                    rentogoImg.alt = rentogoImages[idx].alt;
+                    rentogoCaption.innerHTML = rentogoImages[idx].caption;
+                }
+            }
+
+            if (rentogoLeftBtn && rentogoRightBtn) {
+                rentogoLeftBtn.addEventListener('click', function() {
+                    rentogtoCurrent = (rentogtoCurrent - 1 + rentogoImages.length) % rentogoImages.length;
+                    updateRentogoCarousel(rentogtoCurrent);
+                });
+                rentogoRightBtn.addEventListener('click', function() {
+                    rentogtoCurrent = (rentogtoCurrent + 1) % rentogoImages.length;
+                    updateRentogoCarousel(rentogtoCurrent);
+                });
+            }
+
+            // Globance carousel
+            var globanceImages = [
+                {
+                    src: 'ChatbotGenai.png',
+                    alt: 'Chatbot GenAI Feature',
+                    caption: '<strong>Chatbot GenAI (Multilanguage):</strong> Automates business processes and provides intelligent, multilingual responses to user queries.'
+                },
+                {
+                    src: 'EmailGenerator.png',
+                    alt: 'Email Generator Feature',
+                    caption: '<strong>Email Generator:</strong> Uses OpenAI to quickly create professional emails, streamlining communication and saving time.'
+                }
+            ];
+            var globanceCurrent = 0;
+            var globanceImg = document.getElementById('globance-image');
+            var globanceCaption = document.getElementById('globance-caption');
+            var globanceLeftBtn = document.getElementById('globance-left');
+            var globanceRightBtn = document.getElementById('globance-right');
+
+            function updateGlobanceCarousel(idx) {
+                if (globanceImg && globanceCaption) {
+                    globanceImg.src = globanceImages[idx].src;
+                    globanceImg.alt = globanceImages[idx].alt;
+                    globanceCaption.innerHTML = globanceImages[idx].caption;
+                }
+            }
+
+            if (globanceLeftBtn && globanceRightBtn) {
+                globanceLeftBtn.addEventListener('click', function() {
+                    globanceCurrent = (globanceCurrent - 1 + globanceImages.length) % globanceImages.length;
+                    updateGlobanceCarousel(globanceCurrent);
+                });
+                globanceRightBtn.addEventListener('click', function() {
+                    globanceCurrent = (globanceCurrent + 1) % globanceImages.length;
+                    updateGlobanceCarousel(globanceCurrent);
+                });
+            }
+        });
+    </script>
 </body>
-<script>
-// Make header brand clickable to go to homepage
-document.addEventListener('DOMContentLoaded', function() {
-    var brand = document.getElementById('home-brand');
-    if (brand) {
-        brand.addEventListener('click', function() {
-            window.location.href = 'index.html';
-        });
-    }
-    // Globance carousel functionality
-    var globanceImages = [
-        {
-            src: 'ChatbotGenai.png',
-            alt: 'Chatbot GenAI Feature',
-            caption: '<strong>Chatbot GenAI (Multilanguage):</strong> Automates business processes and provides intelligent, multilingual responses to user queries.'
-        },
-        {
-            src: 'EmailGenerator.png',
-            alt: 'Email Generator Feature',
-            caption: '<strong>Email Generator:</strong> Uses OpenAI to quickly create professional emails, streamlining communication and saving time for users.'
-        }
-    ];
-    var globanceCurrent = 0;
-    var globanceImg = document.getElementById('globance-image');
-    var globanceCaption = document.getElementById('globance-caption');
-    var globanceLeftBtn = document.getElementById('globance-left');
-    var globanceRightBtn = document.getElementById('globance-right');
-    function updateGlobanceCarousel(idx) {
-        globanceImg.src = globanceImages[idx].src;
-        globanceImg.alt = globanceImages[idx].alt;
-        globanceCaption.innerHTML = globanceImages[idx].caption;
-    }
-    if (globanceImg && globanceCaption && globanceLeftBtn && globanceRightBtn) {
-        globanceLeftBtn.addEventListener('click', function() {
-            globanceCurrent = (globanceCurrent - 1 + globanceImages.length) % globanceImages.length;
-            updateGlobanceCarousel(globanceCurrent);
-        });
-        globanceRightBtn.addEventListener('click', function() {
-            globanceCurrent = (globanceCurrent + 1) % globanceImages.length;
-            updateGlobanceCarousel(globanceCurrent);
-        });
-    }
-    // RENT TO GO carousel functionality
-    var images = [
-        {
-            src: 'Chatbot.png',
-            alt: 'Chatbot Feature',
-            caption: '<strong>Chatbot:</strong> Provides instant support and answers to user queries, making the rental process smoother and more interactive.'
-        },
-        {
-            src: 'Feedback.png',
-            alt: 'Feedback Feature',
-            caption: '<strong>Feedback:</strong> Lets users easily submit feedback and suggestions, helping us improve the app based on real user experiences.'
-        }
-    ];
-    var current = 0;
-    var img = document.getElementById('rentogo-image');
-    var caption = document.getElementById('rentogo-caption');
-    var leftBtn = document.getElementById('rentogo-left');
-    var rightBtn = document.getElementById('rentogo-right');
-    function updateCarousel(idx) {
-        img.src = images[idx].src;
-        img.alt = images[idx].alt;
-        caption.innerHTML = images[idx].caption;
-    }
-    if (img && caption && leftBtn && rightBtn) {
-        leftBtn.addEventListener('click', function() {
-            current = (current - 1 + images.length) % images.length;
-            updateCarousel(current);
-        });
-        rightBtn.addEventListener('click', function() {
-            current = (current + 1) % images.length;
-            updateCarousel(current);
-        });
-    }
-});
-</script>
 </html>

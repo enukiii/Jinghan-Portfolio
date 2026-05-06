@@ -11,6 +11,16 @@
 </head>
 
 <body>
+	<!-- Intro Splash Screen -->
+	<div id="intro-overlay" class="intro-overlay">
+		<div class="intro-container">
+			<div class="swirl-animation">
+				<div class="swirl"></div>
+			</div>
+			<h1 class="intro-text">Welcome to Jinghan's Digital Portfolio</h1>
+		</div>
+	</div>
+
 	<header>
 		<nav class="navbar">
 			<div class="navbar-brand" style="cursor:pointer;" id="home-brand">Jinghan's Portfolio</div>
@@ -42,59 +52,113 @@
 		<section id="projects">
 			<h2>Featured Projects</h2>
 			<div class="project-list">
-				<div class="project">
-					<h3>RENT TO GO</h3>
-					<p><strong>Python · Flask · Jinja | 2024 - 2025</strong></p>
-					<p>Marketplace app for renting eco-friendly items. Built with Python, Flask, and Jinja; contributed
-						to both frontend and backend.</p>
-					<a href="projects.html" class="learn-more-btn">Learn More</a>
+				<div class="project-card">
+					<div class="project-header">
+						<h3>RENT TO GO</h3>
+						<span class="project-badge">2024 - 2025</span>
+					</div>
+					<p class="project-tech"><i class="fab fa-python"></i> Python · <i class="fab fa-flask"></i> Flask · <i class="fas fa-code"></i> Jinja</p>
+					<p class="project-description">Marketplace app for renting eco-friendly items. Contributed to both frontend and backend, building user-friendly interfaces and robust backend functionality.</p>
+					<div class="project-highlights">
+						<span class="highlight"><i class="fas fa-check"></i> Chatbot Integration</span>
+						<span class="highlight"><i class="fas fa-check"></i> User Interaction</span>
+						<span class="highlight"><i class="fas fa-check"></i> Feedback System</span>
+					</div>
+					<a href="projects.html" class="project-link"><i class="fas fa-arrow-right"></i> View Project</a>
 				</div>
-				<div class="project">
-					<h3>Globance <span style="font-size:0.9em; color:#00aaff;">| Kwang Hiap Siang Pte Ltd</span></h3>
-					<p><strong>React · Node.js · SQL | 2025</strong></p>
-					<p>AI-driven web tools for wholesale trade, automating sourcing and export communications. Improved
-						workflow and lead targeting.</p>
-					<a href="projects.html#globance" class="learn-more-btn">Learn More</a>
+				<div class="project-card">
+					<div class="project-header">
+						<h3>Globance</h3>
+						<span class="project-badge">Kwang Hiap Siang Pte Ltd</span>
+					</div>
+					<p class="project-tech"><i class="fab fa-react"></i> React · <i class="fab fa-node-js"></i> Node.js · <i class="fas fa-database"></i> SQL</p>
+					<p class="project-description">AI-driven web tools for wholesale trade, automating sourcing and export communications. Improved workflow efficiency and lead targeting accuracy.</p>
+					<div class="project-highlights">
+						<span class="highlight"><i class="fas fa-check"></i> AI Chatbot</span>
+						<span class="highlight"><i class="fas fa-check"></i> Email Automation</span>
+						<span class="highlight"><i class="fas fa-check"></i> Analytics Dashboard</span>
+					</div>
+					<a href="projects.html#globance" class="project-link"><i class="fas fa-arrow-right"></i> View Project</a>
 				</div>
 			</div>
 		</section>
 		<section id="skills">
 			<h2>Technical Skills</h2>
-			<ul class="skills-list">
-				<li><i class="fab fa-html5" title="HTML5"></i> HTML5</li>
-				<li><i class="fab fa-css3-alt" title="CSS3"></i> CSS</li>
-				<li><i class="fab fa-js" title="JavaScript"></i> JavaScript</li>
-				<li><i class="fab fa-react" title="React.js"></i> React.js</li>
-				<li><i class="fab fa-python" title="Python"></i> Python</li>
-				<li><i class="fab fa-git-alt" title="Git"></i> Git & GitHub</li>
-				<li><i class="fas fa-pencil-ruler" title="UI/UX Design"></i> UI/UX Design</li>
-				<li><i class="fas fa-database" title="SQL"></i> SQL</li>
-				<li><i class="fas fa-server" title="Flask"></i> Flask</li>
-				<li><i class="fas fa-code" title="Jinja"></i> Jinja</li>
-				<li><i class="fas fa-hashtag" title="C#"></i> C#</li>
-			</ul>
+			<div class="skills-container">
+				<!-- Frontend Skills -->
+				<div class="skill-category">
+					<h3 class="category-title"><i class="fas fa-code"></i> Frontend</h3>
+					<ul class="skills-list">
+						<li><i class="fab fa-html5"></i> HTML5</li>
+						<li><i class="fab fa-css3-alt"></i> CSS</li>
+						<li><i class="fab fa-js"></i> JavaScript</li>
+						<li><i class="fab fa-react"></i> React.js</li>
+					</ul>
+				</div>
+
+				<!-- Backend Skills -->
+				<div class="skill-category">
+					<h3 class="category-title"><i class="fas fa-server"></i> Backend</h3>
+					<ul class="skills-list">
+						<li><i class="fab fa-python"></i> Python</li>
+						<li><i class="fas fa-server"></i> Flask</li>
+						<li><i class="fas fa-code"></i> Jinja</li>
+						<li><i class="fas fa-hashtag"></i> C#</li>
+					</ul>
+				</div>
+
+				<!-- Database & Tools -->
+				<div class="skill-category">
+					<h3 class="category-title"><i class="fas fa-wrench"></i> Database & Tools</h3>
+					<ul class="skills-list">
+						<li><i class="fas fa-database"></i> SQL</li>
+						<li><i class="fab fa-git-alt"></i> Git & GitHub</li>
+						<li><i class="fas fa-pencil-ruler"></i> UI/UX Design</li>
+					</ul>
+				</div>
+			</div>
 		</section>
 
 		<section id="certifications">
 			<h2>Certifications</h2>
-			<div class="cert-card">
-				<span class="cert-title">PCEP - Certified Entry-Level Python Programmer</span>
-				<span class="cert-year">2024</span>
+			<div class="achievement-grid">
+				<div class="achievement-card">
+					<div class="achievement-icon">
+						<i class="fas fa-certificate"></i>
+					</div>
+					<h3>PCEP - Certified Entry-Level Python Programmer</h3>
+					<span class="achievement-year">2024</span>
+					<p class="achievement-issuer">OpenEDG - Python Institute</p>
+				</div>
 			</div>
 		</section>
 		<section id="awards">
-			<h2>Awards</h2>
-			<div class="cert-card">
-				<span class="cert-title">NYAA - National Youth Achievement Award Sliver</span>
-				<span class="cert-year">2022</span>
-			</div>
-			<div class="cert-card">
-				<span class="cert-title">ITE Ignite Skill Challenge - Finalist</span>
-				<span class="cert-year">2021</span>
-			</div>
-			<div class="cert-card">
-				<span class="cert-title">NYAA - National Youth Achievement Award Bronze</span>
-				<span class="cert-year">2020</span>
+			<h2>Awards & Recognition</h2>
+			<div class="achievement-grid">
+				<div class="achievement-card">
+					<div class="achievement-icon">
+						<i class="fas fa-trophy"></i>
+					</div>
+					<h3>NYAA - National Youth Achievement Award</h3>
+					<span class="achievement-year">2022</span>
+					<p class="achievement-issuer">Silver Award</p>
+				</div>
+				<div class="achievement-card">
+					<div class="achievement-icon">
+						<i class="fas fa-star"></i>
+					</div>
+					<h3>ITE Ignite Skill Challenge</h3>
+					<span class="achievement-year">2021</span>
+					<p class="achievement-issuer">Finalist</p>
+				</div>
+				<div class="achievement-card">
+					<div class="achievement-icon">
+						<i class="fas fa-medal"></i>
+					</div>
+					<h3>NYAA - National Youth Achievement Award</h3>
+					<span class="achievement-year">2020</span>
+					<p class="achievement-issuer">Bronze Award</p>
+				</div>
 			</div>
 		</section>
 
